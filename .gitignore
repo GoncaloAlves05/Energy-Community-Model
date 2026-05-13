@@ -220,3 +220,5 @@ __marimo__/
 # ficheiros gerados — não versionar
 data/
 
+# ficheiro externo ERSE
+data/raw/
