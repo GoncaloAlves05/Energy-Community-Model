@@ -39,6 +39,27 @@ how community composition and energy sharing rules affect collective outcomes.
 - With 50% prosumers and dynamic sharing, members save up to **~250€/year**
   without any battery storage
 
+## ML Extension
+
+Real data replaces synthetic profiles via an offline XGBoost pipeline.
+
+```
+PVGIS API → solar production (Porto, 3 kWp, 2020)
+ERSE E-REDES → consumption profiles BTN A + BTN C (2023)
+    ↓
+XGBoost training (3 models) · temporal split 83/17
+    ↓
+8 760h forecasts → loaded as Mesa agent inputs
+```
+
+![Comparison](results_comparison.png)
+
+| Metric | Synthetic | ML |
+|---|---|---|
+| Self-consumption rate | 53.0% | 58.3% |
+| Energy shared | 31 482 kWh | 36 049 kWh |
+| Avg. savings/member | 249 €/year | **329 €/year** |
+
 ## Regulatory Context
 
 | Reference | Description |
@@ -47,4 +68,3 @@ how community composition and energy sharing rules affect collective outcomes.
 | RAC nº 815/2023 (ERSE) | Defines the 4 energy sharing modes simulated |
 | PVGIS (EU Commission) | Solar irradiation data reference for Portugal |
 | ERSE BTN profiles | Hourly consumption profiles (residential & small business) |
-
