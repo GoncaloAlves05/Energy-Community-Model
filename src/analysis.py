@@ -29,10 +29,10 @@ plt.rcParams.update({
 
 # Cores e etiquetas para cada modo de partilha
 COLORS = {
-    "fixed"        : "#2196F3",
-    "proportional" : "#4CAF50",
-    "hierarchical" : "#FF9800",
-    "dynamic"      : "#9C27B0",
+    "fixed"        : "#52D68A",
+    "proportional" : "#A8E6CF",
+    "hierarchical" : "#80CBC4",
+    "dynamic"      : "#B2DFDB",
 }
 LABELS = {
     "fixed"        : "Fixed Coef.",
@@ -81,7 +81,7 @@ print("\nSimulações concluídas.\n")
 # Figura principal — 4 painéis
 # ---------------------------------------------------------------------------
 fig = plt.figure(figsize=(16, 11))
-fig.patch.set_facecolor("#0f1117")
+fig.patch.set_facecolor("#1a2420")
 fig.suptitle(
     "Simulating Renewable Energy Communities with Agent-Based Modelling",
     fontsize=15, fontweight="bold", y=0.98, color="white"
@@ -96,9 +96,9 @@ ax2 = fig.add_subplot(gs[0, 1])
 ax3 = fig.add_subplot(gs[1, 0])
 ax4 = fig.add_subplot(gs[1, 1])
 
-DARK_BG   = "#1e2130"
+DARK_BG   = "#1a2420"
 TEXT_COLOR = "white"
-GRID_COLOR = "#2e3250"
+GRID_COLOR = "#2a3a30"
 
 for ax in [ax1, ax2, ax3, ax4]:
     ax.set_facecolor(DARK_BG)
